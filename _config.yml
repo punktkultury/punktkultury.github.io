@@ -1,0 +1,41 @@
+highlighter: pygments
+markdown: kramdown
+rdiscount:
+  extensions: [smart]
+permalink: /:title.html
+port: 3000
+timezone: Europe/Warsaw
+
+url: http://punktkultury.pl
+baseurl: ""
+title: "Punkt Kultury"
+name: "Punkt Kultury"
+author: "Punkt Kultury"
+description: "Punkt Kultury"
+# avatar: profile.png
+email: biuro@punktkultury.pl
+twitter: punktkultury
+google_analytics: UA-67137265-1
+
+sass:
+    style: compressed
+    sass_dir: static/css
+
+compress_html:
+    clippings: all
+    comments: all
+    startings: []
+    endings: []
+    ignore:
+        envs: [local]
+    blanklines: false
+    profile: false
+
+gems:
+    - jekyll-sitemap
+
+collections:
+    aktualnosci:
+        output: true
+        permalink: /aktualnosci/:path/
+        active: aktualnosci

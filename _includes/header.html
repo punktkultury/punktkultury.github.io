@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ site.name }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="{{ site.description }}"/>
+        <link rel="shortcut icon" type="image/png" href=""/>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700|Roboto+Slab:300,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="{{ site.baseurl }}/static/css/normalize.css" type="text/css" rel="stylesheet"/>
+        <link href="{{ site.baseurl }}/static/css/csswizardry-grids.css" type="text/css" rel="stylesheet"/>
+        <link href="{{ site.baseurl }}/static/css/main.css?{{ site.time | date_to_xmlschema | slugify }}" type="text/css" rel="stylesheet"/>
+
+        <meta property="og:image" content=""/>
+        <meta property="og:description" content=""/>
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="{{ site.title }}"/>
+        <meta property="og:description" content="{{ site.description }}"/>
+        <meta property="og:url" content="{{ site.url }}"/>
+        <meta property="og:site_name" content="{{ site.name }}"/>
+        <meta property="og:logo" content="">
+
+        <!--meta name="google-site-verification" content="RYsnCZIZLqroTz5BkxAjtdD2Z-Tf0ASZbrA0shEAZ9s" /-->
+
+        <meta name="author" content="{{ site.author }}"/>
+
+        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=394057787455023&ev=PageView&noscript=1"/></noscript>
+    </head>
+    <body class="{{ page.active }}">
+        <!Google Tag Manager >
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTMTX7QZS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTMTX7QZS');</script>
+        <!End Google Tag Manager >
+
+        <div class="container">
+            <section class="content page--heading">
+                <h1><a href="/">Punkt Kultury</a></h1>
+                {% include nav-main.html %}
+            </section>

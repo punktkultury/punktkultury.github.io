@@ -1,0 +1,11 @@
+a,
+a:link,
+a:visited {
+    color: $color-link;
+}
+
+a:hover, a:focus, a:active {
+    outline: none;
+    background-color: $color-primary;
+    color: #fff;
+}
