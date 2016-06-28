@@ -2,15 +2,39 @@
 title: "Aktualności Punktu Kultury"
 layout: default
 active: aktualnosci
-permalink: 
+permalink: aktualnosci/
 ---
+
+
+{% assign aktualnosci = site.aktualnosci %}
+
+
+<section class="heading intro">
+    <div class="content">
+        <h1>Aktualności</h1>
+    </div>
+</section>
 
 
 <section class="heading">
 
     <div class="content">
 
-        
+            {% for artykul in aktualnosci %}
+                <article>
+                    <div class="grid">
+                        <div class="grid__item one-third portable==one-whole">
+                            <a href="{{ artykul.permalink }}"><img src="{{ site.baseurl }}/static/img/aktualnosci/{{ artykul.slug }}/thumbnail.jpg"/></a>
+                        </div>
+
+                        <div class="grid__item two-thirds portable==one-whole">
+                            <h2>{{ artykul.long_title }}</h2>
+                            <p>{{ artykul.lead }}</p>
+                            <p><a href="{{ artykul.permalink }}">Czytaj artykuł</a></p>
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}
 
     </div>
 

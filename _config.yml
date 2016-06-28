@@ -1,4 +1,4 @@
-highlighter: pygments
+highlighter: rouge
 markdown: kramdown
 rdiscount:
   extensions: [smart]
@@ -39,3 +39,4 @@ collections:
         output: true
         permalink: /aktualnosci/:path/
         active: aktualnosci
+        layout: aktualnosci
