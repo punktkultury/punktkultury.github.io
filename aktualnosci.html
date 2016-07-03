@@ -1,8 +1,8 @@
 ---
 title: "Aktualności Punktu Kultury"
 layout: default
-active: aktualnosci
 permalink: aktualnosci/
+active: "aktualnosci"
 ---
 
 
@@ -20,17 +20,17 @@ permalink: aktualnosci/
 
     <div class="content">
 
-            {% for artykul in aktualnosci %}
+            {% for article in aktualnosci %}
                 <article>
                     <div class="grid">
                         <div class="grid__item one-third portable==one-whole">
-                            <a href="{{ artykul.permalink }}"><img src="{{ site.baseurl }}/static/img/aktualnosci/{{ artykul.slug }}/thumbnail.jpg"/></a>
+                            <a href="{{ article.permalink }}"><img src="{{ site.baseurl }}/static/img/aktualnosci/{{ article.slug }}/thumbnail.jpg"/></a>
                         </div>
 
                         <div class="grid__item two-thirds portable==one-whole">
-                            <h2>{{ artykul.long_title }}</h2>
-                            <p>{{ artykul.lead }}</p>
-                            <p><a href="{{ artykul.permalink }}">Czytaj artykuł</a></p>
+                            <h2>{{ article.title }}</h2>
+                            <p>{{ article.lead }}</p>
+                            <p><a href="{{ article.url }}" title="Czytaj artykuł: {{ article.title_long }}">Czytaj artykuł</a></p>
                         </div>
                     </div>
                 </article>

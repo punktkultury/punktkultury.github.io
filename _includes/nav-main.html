@@ -1,10 +1,11 @@
     <nav role="navigation">
         <ul>
-            <li{% if page.active == "aktualnosci" %} class="current"{% endif %}><a href="{{ site.baseurl }}/aktualnosci/">Aktualności</a></li>
-            <li{% if page.active == "wydarzenia" %} class="current"{% endif %}><a href="{{ site.baseurl }}/wydarzenia/">Wydarzenia</a></li>
-            <li{% if page.active == "o-nas" %} class="current"{% endif %}><a href="{{ site.baseurl }}/o-nas/">O nas</a></li>
-            <li{% if page.active == "zespol" %} class="current"{% endif %}><a href="{{ site.baseurl }}/zespol/">Zespół</a></li>
-            <li{% if page.active == "dokumenty" %} class="current"{% endif %}><a href="{{ site.baseurl }}/dokumenty/">Dokumenty</a></li>
-            <li{% if page.active == "kontakt" %} class="current"{% endif %}><a href="{{ site.baseurl }}/kontakt/">Kontakt</a></li>
+            <li{% if page.active contains "aktualnosci" %} class="current"{% endif %}><a href="{{ site.baseurl }}/aktualnosci/">Aktualności</a></li>
+            <li{% if page.active contains "wydarzenia" %} class="current"{% endif %}><a href="{{ site.baseurl }}/wydarzenia/">Wydarzenia</a></li>
+            <li{% if page.active contains "o-nas" %} class="current"{% endif %}><a href="{{ site.baseurl }}/o-nas/">O nas</a></li>
+            <li{% if page.active contains "zespol" %} class="current"{% endif %}><a href="{{ site.baseurl }}/zespol/">Zespół</a></li>
+            <li{% if page.active contains "dokumenty" %} class="current"{% endif %}><a href="{{ site.baseurl }}/dokumenty/">Dokumenty</a></li>
+            <li{% if page.active contains "kontakt" %} class="current"{% endif %}><a href="{{ site.baseurl }}/kontakt/">Kontakt</a></li>
+            <li class="english{% if page.active contains "about" %} current{% endif %}"><a href="{{ site.baseurl }}/about/">About us</a></li>
         </ul>
     </nav>

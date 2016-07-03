@@ -1,10 +1,9 @@
 ---
 title: "Compass: Human Rights Education Training – Loughborough, Wielka Brytania"
-long_title: "Compass: Human Rights Education Training – Loughborough, Wielka Brytania"
+title_long: "Compass: Human Rights Education Training – Loughborough, Wielka Brytania"
+slug: "compass-human-rights-education-training"
 lead: "Uczestniczymy w jednym z ciekawszych projektów edukacyjnych poświęconych prawom człowieka! Uczymy się sami i uczymy się, jak edukować innych o wolności, równości, godności człowieka, demokracji odpowiedzialności i solidarności."
-
-slug: compass-human-rights-education-training
-permalink: compass-human-rights-education-training/
+article_date: "2015-04-15"
 ---
 
 Uczestniczymy w jednym z ciekawszych projektów edukacyjnych poświęconych prawom człowieka! Uczymy się sami i uczymy się, jak edukować innych o wolności, równości, godności człowieka, demokracji odpowiedzialności i solidarności.

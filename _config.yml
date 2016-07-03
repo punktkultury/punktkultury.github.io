@@ -38,5 +38,13 @@ collections:
     aktualnosci:
         output: true
         permalink: /aktualnosci/:path/
-        active: aktualnosci
-        layout: aktualnosci
+
+defaults:
+    -
+      scope:
+        path: "aktualnosci"
+        type: "aktualnosci"
+      values:
+        layout: "aktualnosci"
+        active: "aktualnosci single-article"
+        title: "Aktualności Punktu Kultury"

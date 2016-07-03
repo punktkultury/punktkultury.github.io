@@ -5,10 +5,47 @@ active: home
 ---
 
 
+{% assign aktualnosci = site.aktualnosci | sort: "article_date" | reverse %}
+
+
 <section class="heading">
 
     <div class="content news">
 
+        
+        {% for article in aktualnosci %}
+
+            {% assign m = article.article_date | date: "%-m" %}
+            {% capture m_name %}
+                {% case m %}
+                  {% when '1' %}stycznia
+                  {% when '2' %}lutego
+                  {% when '3' %}marca
+                  {% when '4' %}kwietnia
+                  {% when '5' %}maja
+                  {% when '6' %}czerwca
+                  {% when '7' %}lipca
+                  {% when '8' %}sierpnia
+                  {% when '9' %}września
+                  {% when '10' %}października
+                  {% when '11' %}listopada
+                  {% when '12' %}grudnia
+                {% endcase %}
+            {% endcapture %}
+
+            {% capture article_date %}{{ article.article_date | date: "%-d" }} {{ m_name }} {{ article.article_date | date: "%-Y" }}{% endcapture %}
+
+            <a href="{{ article.url }}">
+                <article style="background-image: url(/static/img/aktualnosci/{{ article.slug }}/cover.jpg);">
+                    <h2>{{ article.title }}</h2>
+                    <h3>{{ article_date }}</h3>
+                    <p>{{ article.lead }}</p>
+                </article>
+            </a>
+
+        {% endfor %}
+        
+{% comment %}
         <a href="">
             <article id="news-1">
                 <h2>Warsztaty kuchni gruzińskiej z Szefem Keti Prangulaishvili</h2>
@@ -80,6 +117,9 @@ active: home
                 <p class="lead">Zapraszamy do oglądnięcia zdjęć z prowadzonych przez nas warsztatów dla dzieci na temat religii świata.</p>
             </article>
         </a>
+
+{% endcomment %}
+        
     </div>
 
 
